@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, FileText, Settings, UserCircle, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText } from 'lucide-react';
 
 export default function Sidebar() {
   return (
@@ -13,19 +13,7 @@ export default function Sidebar() {
       
       <nav className="flex-1 px-4 space-y-2 mt-4">
         <NavItem icon={<LayoutDashboard size={20} />} label="Dashboard" active />
-        <NavItem icon={<Settings size={20} />} label="Settings" />
       </nav>
-
-      <div className="p-4 border-t border-border mt-auto">
-        <button className="flex items-center gap-3 w-full p-3 rounded-lg hover:bg-muted/50 transition-colors text-muted-foreground hover:text-foreground">
-          <UserCircle size={20} />
-          <span className="font-medium text-sm">John Doe</span>
-        </button>
-        <button className="flex items-center gap-3 w-full p-3 mt-1 rounded-lg hover:bg-red-500/10 text-red-500 transition-colors">
-          <LogOut size={20} />
-          <span className="font-medium text-sm">Logout</span>
-        </button>
-      </div>
     </aside>
   );
 }
